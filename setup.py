@@ -31,7 +31,7 @@ def read(*rnames):
 
 setup(
     name="django-customselectwidget",
-    version="0.1",
+    version="0.1.0",
     author="Sayed Hisham",
     author_email="hisham2k9@gmail.com",
     description="Django Custom select widget",

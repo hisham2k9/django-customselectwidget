@@ -27,7 +27,7 @@ Configure your models.py or forms.py
 .. code-block:: python
 
     from django.forms.models import ModelForm
-    from customselectwidget import CustomSelectWidget
+    from customselectwidget.customselectwidget import CustomSelectWidget
     from django import forms
 
     # ...
