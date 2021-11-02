@@ -31,13 +31,13 @@ def read(*rnames):
 
 setup(
     name="django-customselectwidget",
-    version="0.1.0",
+    version="0.1.1",
     author="Sayed Hisham",
     author_email="hisham2k9@gmail.com",
+    url="https://github.com/hisham2k9/django-customselectwidget",
     description="Django Custom select widget",
-    long_description=(read('README.rst') + '\n\n' + read('CHANGES.rst')),
+    long_description=(read('README.rst')),
     classifiers=[
-        'Development Status :: 1 - Beta',
         'Framework :: Django',
         'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
         "Operating System :: OS Independent",
@@ -46,7 +46,6 @@ setup(
     ],
     license="LGPL 3",
     keywords="django,custom,select,field,choices,widget",
-    url='https://github.com/hisham2k9/django-customselectwidget',
     packages=find_packages(),
     include_package_data=True,
     tests_require=[
