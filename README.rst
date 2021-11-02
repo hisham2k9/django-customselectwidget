@@ -21,36 +21,36 @@ Install with pip
 
     $ pip install django-CustomSelectWidget
 
-Configure your models.py
-------------------------
+Configure your models.py or forms.py
+-------------------------------------
 
 .. code-block:: python
 
     from django.forms.models import ModelForm
-    from CustomSelectWidget import custom_select_widget
+    from customselectwidget import CustomSelectWidget
     from django import forms
 
     # ...
 
     
-    class MyModel(ModelForm):
+    class MyModelForm(ModelForm):
 
         # .....
         my_field=forms.CharField(required=False,max_length=200, label='Please select your task')
         def __init__(self, *args, **kwargs):
             _type_list = kwargs.pop('data_list', None)
-            super(imsvalidateform, self).__init__(*args, **kwargs)
+            super(MyModelForm, self).__init__(*args, **kwargs)
             # the "name" parameter will allow you to use the same widget more than once in the same
             # form, not setting this parameter differently will cuse all inputs display the
             # same list.
-            self.fields['validation_final_type'].widget = custom_select_widget(data_list=['option 1','option 2','option 3'], name='type-list')
+            self.fields['my_field'].widget = CustomSelectWidget(data_list=['option 1','option 2','option 3'], name='type-list')
     
 
 
 In your settings.py
 -------------------
 
-Only you need it, if you want the translation of django-multiselectfield
+
 
 .. code-block:: python
 
@@ -63,7 +63,7 @@ Only you need it, if you want the translation of django-multiselectfield
 
         #.....................#
 
-        'CustomSelectWidget',
+        'customselectwidget',
     )
 
 
